@@ -7,8 +7,7 @@ function takeANumber(katzDeliLine, name) {
 
 function nowServing(katzDeliLine) {
   if (katzDeliLine.length != 0) {
-    return "Currently serving " + katzDeliLine[0] + ".";
-    katzDeliLine.shift();
+    return "Currently serving " + katzDeliLine.shift() + ".";
   }
   return "There is nobody waiting to be served!";
 }
@@ -19,7 +18,7 @@ function currentLine(katzDeliLine) {
     for (let i = 0; i<katzDeliLine.length; i++) {
       line += (i+1) + ". " + katzDeliLine[i];
       if (i < katzDeliLine.length - 1) {
-        line += ",";
+        line += ", ";
       }
     }
     return line;
